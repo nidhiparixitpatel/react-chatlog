@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
+import Log from
+  './components/Log';
 
 const App = () => {
   console.log(chatMessages);
