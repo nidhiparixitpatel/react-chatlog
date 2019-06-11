@@ -1,4 +1,5 @@
 import React from 'react';
+import Timestamp from './Timestamp';
 
 const Message = (props) => {
 
@@ -6,18 +7,16 @@ const Message = (props) => {
   // if (props.classRoom === 'port') {
   //   classToUse = 'student-port'
   // } */}
-
   return (
     <section>
       <h3>{props.sender}</h3>
-      <p>{props.body} <p>
+      <p>{props.body} </p>
       <Timestamp
           time={props.timestamp}
         />
     </section>
   );
 };
-
 
 export default Message;
 

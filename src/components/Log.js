@@ -3,20 +3,27 @@ import Message from './Message';
 
 
 
-const Log = (props) => {
+const generateMessageComponents = (messages) => {
+  return messages.map((message) => {
+    const {sender, body, timestamp} = message;
+    return (<Message
+      sender={sender}
+      body={body}
+      timestamp={timestamp}
+      />)
+  })
+};
 
+const Log = (props) => {
+  const messageComponents = generateMessageComponents(props.props);
   return (
-    <section>
-      <h3>{props.sender}</h3>
-      <p>{props.body} <p>
-      <p>{props.timestamp} </p>
-    </section>
+    <div className="">
+      {messageComponents}
+    </div>
   );
 };
 
-
 export default Log;
-
 
 
 

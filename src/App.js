@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
-// import Log from
-//   './components/Log';
+import Log from './components/Log';
 
 const App = () => {
   console.log(chatMessages);
@@ -11,6 +10,10 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Chat Log</h1>
+        <Log
+          props={chatMessages}
+        />
+
       </header>
       <main className="App-main">
 
